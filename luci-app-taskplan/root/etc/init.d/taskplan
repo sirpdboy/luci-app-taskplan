@@ -12,8 +12,8 @@ CR=/etc/crontabs/root
 
 run_taskplan()
 {
-[  `uci -q get taskplan.@global[0].customscript  |  wc -l ` > 0 ] && uci -q get taskplan.@global[0].customscript > /etc/taskplan/taskplancustomscript
-[  `uci -q get taskplan.@global[0].customscript2  |  wc -l ` > 0 ] && uci -q get taskplan.@global[0].customscript2 > /etc/taskplan/taskplancustomscript2
+[  `uci -q get taskplan.@global[0].customscript  |  wc -l ` > 0 ] && uci -q get taskplan.@global[0].customscript > /etc/taskplan/taskplancustomscript && sed -i 's/\r$//' /etc/taskplan/taskplancustomscript
+[  `uci -q get taskplan.@global[0].customscript2  |  wc -l ` > 0 ] && uci -q get taskplan.@global[0].customscript2 > /etc/taskplan/taskplancustomscript2 && sed -i 's/\r$//' /etc/taskplan/taskplancustomscript2
 ssum=$(grep -c stime /etc/config/taskplan)
 lsum=$(grep -c ltime /etc/config/taskplan)
 for i in $(seq 0 $((ssum-1)))
