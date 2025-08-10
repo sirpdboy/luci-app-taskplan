@@ -11,7 +11,7 @@ Number visits:![hello](https://views.whatilearened.today/views/github/sirpdboy/d
   </a>
 </p>
 
-[中文] | [English](README.md) 
+[中文](README_CN.md) | English
 
 
 ![screenshots](https://raw.githubusercontent.com/sirpdboy/openwrt/master/doc/说明1.jpg)
