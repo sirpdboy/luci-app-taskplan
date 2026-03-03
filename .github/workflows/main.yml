@@ -25,11 +25,11 @@ jobs:
         with:
           fetch-depth: 0
       - name: Building packages
-        uses: sbwml/openwrt-gh-action-sdk@go1.24
+        uses: sbwml/openwrt-gh-action-sdk@go1.25
         env:
           ARCH: ${{ matrix.arch }}-openwrt-24.10
           FEEDNAME: packages_ci
-          PACKAGES: luci-app-autotimeset
+          PACKAGES: luci-app-taskplan
           NO_REFRESH_CHECK: true
 
       - name: Upload artifacts
